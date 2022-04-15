@@ -1,13 +1,49 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.home {
+    background: linear-gradient(-45deg, red, black, rgb(110, 68, 231), black);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .buttonBox > Button {
+    margin: 10px;
+    padding: 6px 14px;
+    transition: all 0.5s ease;
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+    background-color: rgb(70, 107, 175);
+    border-radius: 4px;
+  }
+
+  .buttonBox > button:hover{
+    background-color: black;
+    color:white
+  }
+
+  .input {
+    margin-bottom: 10px;
+    padding: 6px 14px;
+    transition: all 0.5s ease;
+    color: white;
+    text-align: left;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 4px;
+
+  }
